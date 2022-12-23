@@ -10,12 +10,18 @@
 @import url('../../css/style.css');
 
 #page_content {
-    width: calc(100vw - 16rem);
+    width: calc(100vw - 17rem);
     height: 100vh;
+    padding: 0 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+/* Unecessary */
+#page_content p {
+    text-align: center;
 }
 
 
