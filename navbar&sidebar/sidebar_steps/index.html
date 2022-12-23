@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Loan Courchinoux-Billonnet">
+
+    <!-- Title & favicon -->
+    <title>Example sidebar with steps</title>
+
+    <!-- Custom Theme Style -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+</head>
+<body>
+    
+    <div id="page_content">
+        <h1>Content</h1>
+        <p>It is recommended to add a maximum of 5 steps in the sidebar so that it adapts to most screens without vertical scrolling</p>
+    </div>
+
+    <nav>
+        <section id="sidebar_content">
+            <a href="">
+                <h3 class="number">1</h3>
+                <small>First step</small>
+            </a>
+            <a href="">
+                <h3 class="number">2</h3>
+                <small>Second step</small>
+            </a>
+            <a href="" class="active">
+                <h3 class="number">3</h3>
+                <small>Third step</small>
+            </a>
+            <a href="">
+                <h3 class="number">4</h3>
+                <small>Fourth step</small>
+            </a>
+            <a href="">
+                <h3 class="number">5</h3>
+                <small>Fifth step</small>
+            </a>
+        </section>
+        <section id="toggle">
+            <i class="fas fa-bars fa-2x"></i>
+        </section>
+    </nav>
+
+    <script defer>
+        document.getElementById('toggle').onclick = () => {
+            document.getElementById('sidebar_content').classList.toggle('active');
+        };
+    </script>
+
+</body>
+</html>
