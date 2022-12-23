@@ -19,6 +19,7 @@
     <div id="page_content">
         <h1>Content</h1>
         <p>It is recommended to add a maximum of 5 steps in the sidebar so that it adapts to most screens without vertical scrolling, and write short step title.</p>
+        <button type="button" id="add_error">Add error state on second step</button>
     </div>
 
     <nav>
@@ -55,9 +56,15 @@
     </nav>
 
     <script defer>
+        const content = document.getElementById('sidebar_content');
         document.getElementById('menu_checkbox').onclick = () => {
-            document.getElementById('sidebar_content').classList.toggle('active');
-        };
+            content.classList.toggle('active');
+        }
+
+        // Add error state on second step
+        document.getElementById('add_error').onclick = () => {
+            content.children[1].classList.toggle('res-error');
+        }
     </script>
 
 </body>
