@@ -46,24 +46,71 @@
 /****************
       TOGGLE
 ****************/
+#sidebar_content.active ~ #toggle label div {
+    background-color: white;
+}
 
-#toggle {
+#toggle #menu_checkbox {
+    display: none;
+}
+
+#toggle label {
     position: fixed;
     top: 1rem;
     right: 1rem;
     display: none;
     z-index: 10;
+    width: 30px;
+    height: 30px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
-#toggle:hover {
-    transform: scale(1.25);
+#toggle label:hover {
+    transform: scale(1.15);
 }
 
-#sidebar_content.active ~ #toggle i {
-    color: white;
+#toggle label div {
+    position: relative;
+    top: 0;
+    height: 6px;
+    background-color: black;
+    margin-bottom: 6px;
+    transition: 0.3s ease transform, 0.3s ease top, 0.3s ease width,
+      0.3s ease right;
+    border-radius: 2px;
 }
+  
+#toggle label div:first-child {
+    transform-origin: 0;
+}
+  
+#toggle label div:last-child {
+    margin-bottom: 0;
+    transform-origin: 36px;
+}
+  
+#toggle label div:nth-child(2) {
+    right: 0;
+    width: 30px;
+}
+  
+#toggle #menu_checkbox:checked + label div:first-child {
+    top: -4px;
+    transform: rotateZ(45deg);
+}
+  
+#toggle #menu_checkbox:checked + label div:last-child {
+    top: 8px;
+    transform: rotateZ(45deg);
+}
+  
+#toggle #menu_checkbox:checked + label div:nth-child(2) {
+    width: 45px;
+    top: 0;
+    right:8px;
+    transform: rotateZ(-45deg);
+}  
 
 /****************
      CONTENT
@@ -144,7 +191,7 @@
    RESPONSIVE
 ****************/
 @media screen and (max-width: 700px) {
-    #toggle {
+    #toggle label {
         display: block;
     }
 

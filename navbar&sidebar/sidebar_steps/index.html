@@ -13,9 +13,6 @@
     <!-- Custom Theme Style -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-
 </head>
 <body>
     
@@ -48,12 +45,17 @@
             </a>
         </section>
         <section id="toggle">
-            <i class="fas fa-bars fa-2x"></i>
+            <input type="checkbox" id="menu_checkbox">
+            <label for="menu_checkbox">
+                <div></div>
+                <div></div>
+                <div></div>
+            </label>
         </section>
     </nav>
 
     <script defer>
-        document.getElementById('toggle').onclick = () => {
+        document.getElementById('menu_checkbox').onclick = () => {
             document.getElementById('sidebar_content').classList.toggle('active');
         };
     </script>
